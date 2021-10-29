@@ -1,0 +1,49 @@
+from keyboard import*
+print("Kivi, Käärid, Paber")
+while True:
+    try:
+        if read_key()=="k":
+            print("Oli valitud kivi")
+            break
+    except:
+            ValueError
+m=3
+while m not in [1,2]:
+    try:
+        m=int(input("Kellega mängimine?\n1-inimesega\n2-roobotika"))
+    except:
+        ValueError
+v1=["Kivi, Käärid, Paber"]
+v2=["Kivi, Käärid, Paber"]
+#read_key()!="N"
+if m==1:
+       while True:
+           print("Kas mängime? esc - välja, enter - mängime")
+           if read_key()=="esc":
+               break
+           elif read_key()=="enter":
+                p1=choise(v1)
+                print("Esimene bot: ",p1)
+                p2=choise(v2)
+                print("Teine bot: ",p2)
+           if p1==p2:
+               print("Viik")
+           elif p1==v[0] and p2==v[1] or p1==v1[2] and p2==v[0] or p1==v[1] and p2==v2[2]:
+               print("Võitis 1")
+           else:
+               print("Võitis 2")
+elif m==2:
+ while 1:
+           if read_key()=="esc":
+               break
+           elif read_key()=="enter":
+                p1=choise(v1)
+                print("Esimene bot: ",p1)
+                p2=choise(v2)
+                print("Teine bot: ",p2)
+           if p1==p2:
+               print("Viik")
+           elif p1==v[0] and p2==v[1] or p1==v1[2] and p2==v[0] or p1==v[1] and p2==v2[2]:
+               print("Võitis 1")
+           else:
+               print("Võitis 2")
